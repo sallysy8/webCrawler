@@ -4,8 +4,8 @@ This is a web crawler using Python3 scrapy framework.  The first functionality o
 
 ## How to use it
 ### Dependencies
-1. scrapy
-2. Python3
+1. [scrapy](https://github.com/scrapy/scrapy/blob/master/README.rst)
+2. Python3 (for sure)
 
 You need to install Python3 and scrapy framework.
 ### To list the crawlers
