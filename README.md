@@ -1,6 +1,6 @@
 # webCrawler
 ## Summary
-This is a web crawler using Python3 scrapy framework.  The first functionality of this crawler is to research the music popularily among different medias.  Currently, we support crawling Spotify's top list.
+This is a web crawler using Python3 scrapy framework.  The first functionality of this crawler is to research the music popularity among different media.  Currently, we support crawling Spotify's top list.
 
 ## How to use it
 ### Dependencies
