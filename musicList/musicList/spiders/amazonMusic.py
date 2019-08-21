@@ -1,21 +1,21 @@
 import scrapy
 from bs4 import BeautifulSoup
 
-class Spotify(scrapy.Spider):
-    name = "Spotify"
-    start_urls = ["https://open.spotify.com/playlist/4hOKQuZbraPDIfaGbM3lKI"]
+
+class AmazonMusic(scrapy.Spider):
+    name = "AmazonMusic"
+    start_urls = ["https://music.amazon.com/playlists/B07WK6BSV1"]
 
     def parse(self, response):
         print("start printing results...\n\n\n")
-        trackSelector = "li.tracklist-row"
+        trackSelector = "tr.playlistDetailsListItem"
         #pretty = BeautifulSoup(response.css(trackSelector).extract(), 'html.parser')
         #print(pretty.prettify())
         for track in response.css(trackSelector):
             BeautifulSoup(track.extract()).prettify()
             yield {
-                "Name": track.css("span.track-name ::text").extract(),
+                "Name": track.css("td.title ::text").extract()[0],
                 # intential cutting last element because it is a repeating
                 # track name
-                "Artist": track.css("span a ::text").extract()[:-1]
+                "Artist": track.css("span.artist ::text").extract()[0]
             }
-
