@@ -6,9 +6,11 @@ This is a web crawler using Python3 scrapy framework.  The first functionality o
 ### Dependencies
 1. [scrapy](https://github.com/scrapy/scrapy/blob/master/README.rst)
 2. Python3 (for sure)
+3. [beautifulsoup](https://pypi.org/project/beautifulsoup4/)
 
 You need to install Python3 and scrapy framework.
 ### To list the crawlers
+Go to musicList directory, run the following command:
 ```scrapy list```
 
 ### To crawl
